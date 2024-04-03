@@ -128,7 +128,7 @@ static int findOrCreateGroup(GroupsContext *context, char* l_suppkey, char* l_di
     // 检查上一个值是否相同（这里使用 strcmp 比较字符串）
     if ((last_l_suppkey != NULL && strcmp(l_suppkey, last_l_suppkey) == 0) &&
         (last_l_tax != NULL && strcmp(l_tax, last_l_tax) == 0) && 
-        (last_l_discount != NULL && strcmp(l_discount, last_l_discount)) {
+        (last_l_discount != NULL && strcmp(l_discount, last_l_discount) == 0)){
         //elog(INFO, "lzy same");
         return last_groupIndex;
     }
@@ -161,6 +161,7 @@ static int findOrCreateGroup(GroupsContext *context, char* l_suppkey, char* l_di
 
     context->numGroups++;
     return newIndex;
+
 }
 
 
