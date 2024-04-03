@@ -67,7 +67,7 @@ PG_MODULE_MAGIC;
 typedef struct {
     char* l_suppkey; 
     char* l_discount;
-    char* l_tax
+    char* l_tax;
     float4 *quantities;
     float4 *orderkeys;
     float4 *extendedprices;
